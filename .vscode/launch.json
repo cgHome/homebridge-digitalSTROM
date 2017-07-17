@@ -1,0 +1,43 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "cflat: Attach to Node",
+            "type": "node",
+            "request": "attach",
+            "port": 5858,
+            "protocol": "auto",
+            "address": "cflat.local",
+            "restart": false,
+            "sourceMaps": false,
+            "outFiles": [],
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/home/app"
+        },
+        {
+            "name": "cflat-dev: Attach to Node",
+            "type": "node",
+            "request": "attach",
+            "port": 5858,
+            "protocol": "auto",
+            "address": "cflat-dev.local",
+            "restart": false,
+            "sourceMaps": false,
+            "outFiles": [],
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/home/app"
+        },
+        {
+            "name": "Docker: Attach to Node",
+            "type": "node",
+            "request": "attach",
+            "port": 5858,
+            "address": "localhost",
+            "restart": false,
+            "sourceMaps": false,
+            "outFiles": [],
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/home/app"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "bridge": {
+        "name": "HomebridgeDev",
+        "manufacturer": "github.com/cgHome - Chris Gross",
+        "model": "homebridge-digitalSTROM",
+        "username": "CC:22:3D:E3:CE:3F",
+        "port": 51826,
+        "pin": "123-45-678"
+    },
+    "description": "Homebridge-digitalSTROM - example",
+    "platforms": [
+        {
+            "platform": "digitalSTROM",
+            "name": "dSS",
+            "url": "https://192.168.188.21:8080",
+            "_url": "https://testrack2.aizo.com:58080",
+            "caFile": "cert/cert.pem",
+            "appToken": "8b3c5f10cf62d29cad58bcd52a3dedf67f0959e202aacf54f38f7d49a51ce166",
+            "_appToken": "7bebb1b0e42f3ee3cc3de03ce547f4d485ee4f8ddcc22ef872386997147d23e6",
+            "lang": "de",
+            "refreshEvent": "60",
+            "_refreshEvent": "0",
+            "exclude": []
+        }
+    ],
+    "accessories": []
+}

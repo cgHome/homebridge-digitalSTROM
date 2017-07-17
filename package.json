@@ -1,0 +1,47 @@
+{
+  "name": "homebridge-digitalstrom",
+  "version": "0.0.1",
+  "description": "digitalSTROM plugin for homebridge: https://github.com/nfarina/homebridge",
+  "license": "MIT",
+  "keywords": [
+    "homebridge",
+    "homebridge-plugin",
+    "digitalSTROM",
+    "smarthome",
+    "homekit",
+    "siri"
+  ],
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.4.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run debug",
+    "prod": "npm run _init && pm2-docker start --env production docker/pm2.config.js || true",
+    "dev": "npm run _init && DEBUG=* pm2-docker start docker/pm2.config.js || true",
+    "debug": "npm run _init && NODE_ARGS='--debug' pm2-docker start docker/pm2.config.js || true",
+    "debug-brk": "npm run _init && NODE_ARGS='--debug-brk' pm2-docker start docker/pm2.config.js || true",
+    "_init": "mkdir -p $HOME/data && cp $HOME/app/config.json $HOME/data/",
+    "rebuild": "npm rebuild -no-bin-links",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgHome/homebridge-digitalSTROM.git"
+  },
+  "author": "Chris.Gross <cgHome@gmx.net>",
+  "bugs": {
+    "url": "https://github.com/cgHome/homebridge-digitalSTROM/issues"
+  },
+  "homepage": "https://github.com/cgHome/homebridge-digitalSTROM#readme",
+  "dependencies": {
+    "hap-nodejs-community-types": "https://github.com/homespun/hap-nodejs-community-types.git",
+    "i18n": "^0.8.3",
+    "lodash": "^4.17.4",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "homebridge": ">=0.4.6"
+  }
+}
